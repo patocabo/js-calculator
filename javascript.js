@@ -86,6 +86,12 @@ function buttonPressed(id) {
                         case "/":
                         case "+":
                         case "-":
+                            var tag = document.createElement("p");
+                            var text = document.createTextNode(calculadora.firstOperator + " "+operador+" "+ calculadora.display+" = " +operadores[operador](calculadora.firstOperator, calculadora.display));
+                            tag.appendChild(text);
+                            var element = document.getElementById("memory");
+                            tag.classList.add("elementos-memoria");
+                            element.appendChild(tag);
                             calculadora.display = operadores[operador](calculadora.firstOperator, calculadora.display);
                             updateDisplay();
                             break;
