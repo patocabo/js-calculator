@@ -1,7 +1,7 @@
 
 # JSCalculator
 
-JsCalcutator is a simple calculator built using HTML, CSS and JavaScript
+JsCalculator is a simple calculator built using HTML, CSS and JavaScript
 
 
 ## DEMO
