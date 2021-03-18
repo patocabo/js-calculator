@@ -6,16 +6,16 @@ const calculadora = {
 }
 
 const operadores = {
-    '+': function (a, b) {
+    '+': function(a, b) {
         return a + b
     },
-    '-': function (a, b) {
+    '-': function(a, b) {
         return a - b
     },
-    '*': function (a, b) {
+    '*': function(a, b) {
         return a * b
     },
-    '/': function (a, b) {
+    '/': function(a, b) {
         return a / b
     },
 }
@@ -29,28 +29,27 @@ for (var i = 0; i < boton.length; i++) {
 
 function updateDisplay() {
     document.querySelector('.display').textContent = calculadora.display;
+
 }
 
 function buttonPressed(id) {
-    id.addEventListener('click', function () {
-        if (!isNaN(id.textContent)) {                   ///Si la tecla apretada es un numero
-            if (calculadora.operando ) {
+    id.addEventListener('click', function() {
+        if (!isNaN(id.textContent)) { ///Si la tecla apretada es un numero
+            if (calculadora.operando) {
                 calculadora.display = 0;
                 calculadora.operando = false;
                 updateDisplay();
             }
             if (String(calculadora.display).search("\\.") == -1) {
                 calculadora.display = 10 * calculadora.display + parseFloat(id.textContent);
-            }
-            else {
+            } else {
                 console.log('entro');
                 calculadora.display = calculadora.display + String(id.textContent);
             }
             console.log(parseFloat(calculadora.display));
             updateDisplay();
 
-        }
-        else {
+        } else {
             switch (id.textContent) {
                 case ".":
                     if (String(calculadora.display).search("\\.") == -1) {
@@ -61,8 +60,7 @@ function buttonPressed(id) {
                 case "DEL":
                     if (calculadora.display > 10) {
                         calculadora.display = parseFloat(String(calculadora.display).slice(0, -1));
-                    }
-                    else calculadora.display = 0;
+                    } else calculadora.display = 0;
                     updateDisplay();
                     break;
                 case "C":
@@ -102,7 +100,5 @@ function buttonPressed(id) {
 
             }
         }
-    }
-    );
+    });
 }
-

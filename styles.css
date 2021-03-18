@@ -1,4 +1,6 @@
-*,*::before,*::after{
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     font-weight: normal;
     font-family: Gotham Rounded, sans-serif;
@@ -13,7 +15,7 @@ body {
     height: min-content;
 }
 
-.container{
+.container {
     margin: auto !important;
     text-align: center;
     justify-content: center;
@@ -24,7 +26,7 @@ body {
 
 .display {
     margin: 4px 4px 4px 4px;
-    display:block;
+    display: block;
     background-color: rgb(175, 175, 175);
     height: 100px;
     width: 400px;
@@ -32,34 +34,32 @@ body {
     font-size: 5vw;
     padding: 3px;
     max-width: 400px;
-    text-overflow:ellipsis;
+    text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
 }
 
-
-.teclas{
+.teclas {
     padding: 2px;
-    justify-content:center;
-    display:grid;
-    grid-template-columns: repeat(4,100px);
-    grid-template-rows: repeat(5,100px);
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(5, 100px);
     background-color: rgb(175, 175, 175);
-    grid-auto-flow:column;
+    grid-auto-flow: column;
 }
 
-
-.boton{
+.boton {
     display: block;
     margin: 0 auto;
     width: 95% !important;
     height: 95%;
     font-size: large;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .igual {
-    background-color:rgb(210, 210, 210);
+    background-color: rgb(210, 210, 210);
 }
 
 .c {
